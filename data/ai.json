@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "OpenAI Launches GPT-5, Setting a New Benchmark in Multi-modal Understanding",
+    "description": "The new model introduces a 'thinking mode' for more complex problem-solving and integrates text, image, and voice processing. Benchmarks show a 40% improvement over GPT-4 in handling complex reasoning tasks",
+    "link": "https://simple.ai/p/openai-launches-gpt-5",
+    "date": "2025-08-13",
+    "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/acab73d1-38f0-4f1e-9080-0715f22a567c/GPT-5-NewEra-10.png?t=1755089112"
+  },
+  {
+    "id": 2,
+    "title": "Google DeepMind Achieves Breakthrough in Protein Folding",
+    "link": "#",
+    "date": "2025-06-05"
+  },
+  {
+    "id": 3,
+    "title": "The Ethical Dilemmas of Autonomous AI Agents",
+    "link": "#",
+    "date": "2025-08-18"
+  }
+]

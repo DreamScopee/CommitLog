@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { background-color: #0d1117; position: relative; overflow-x: hidden; min-height: 100vh; font-family: 'Inter', sans-serif; }
+:root { --gradient-background-start: rgb(15, 23, 42); --gradient-background-end: rgb(15, 23, 42); --first-color: 18, 113, 255; --second-color: 221, 74, 255; --third-color: 100, 220, 255; --fourth-color: 200, 50, 50; --fifth-color: 180, 180, 50; --pointer-color: 140, 100, 255; --size: 40%; --blending-value: hard-light; }
+.background-gradient-animation { position: fixed; top: 0; left: 0; height: 100vh; width: 100vw; overflow: hidden; z-index: -1; background: linear-gradient(40deg, var(--gradient-background-start), var(--gradient-background-end)); }
+.gradients-container { height: 100%; width: 100%; filter: url(#blurMe) blur(40px); }
+.gradient-orb { position: absolute; opacity: 1; mix-blend-mode: var(--blending-value); width: var(--size); height: var(--size); top: calc(50% - var(--size) / 2); left: calc(50% - var(--size) / 2); }
+.orb-1 { background: radial-gradient(circle at center, rgba(var(--first-color), 0.8) 0, rgba(var(--first-color), 0) 50%) no-repeat; transform-origin: center center; animation: moveInCircle 20s reverse infinite; }
+.orb-2 { background: radial-gradient(circle at center, rgba(var(--second-color), 0.8) 0, rgba(var(--second-color), 0) 50%) no-repeat; transform-origin: calc(50% - 400px); animation: moveInCircle 20s linear infinite; }
+.orb-3 { background: radial-gradient(circle at center, rgba(var(--third-color), 0.8) 0, rgba(var(--third-color), 0) 50%) no-repeat; transform-origin: calc(50% + 400px); animation: moveInCircle 25s linear infinite; }
+.orb-4 { background: radial-gradient(circle at center, rgba(var(--fourth-color), 0.8) 0, rgba(var(--fourth-color), 0) 50%) no-repeat; transform-origin: calc(50% - 200px); animation: moveHorizontal 25s reverse infinite; }
+.orb-5 { background: radial-gradient(circle at center, rgba(var(--fifth-color), 0.8) 0, rgba(var(--fifth-color), 0) 50%) no-repeat; transform-origin: calc(50% - 800px) calc(50% + 800px); animation: moveInCircle 22s linear infinite; }
+.interactive-orb { position: absolute; background: radial-gradient(circle at center, rgba(var(--pointer-color), 0.8) 0, rgba(var(--pointer-color), 0) 50%) no-repeat; mix-blend-mode: var(--blending-value); width: 100%; height: 100%; top: -50%; left: -50%; opacity: 0.7; }
+@keyframes moveInCircle { 0% { transform: rotate(0deg); } 50% { transform: rotate(180deg); } 100% { transform: rotate(360deg); } }
+@keyframes moveHorizontal { 0% { transform: translateX(-50%) translateY(-10%); } 50% { transform: translateX(50%) translateY(10%); } 100% { transform: translateX(-50%) translateY(-10%); } }
+.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+.glassmorphism-card, .glassmorphism-input { background: rgba(30, 30, 40, 0.5); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 0.75rem; }
+.floating-dock { position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; align-items: flex-end; gap: 0.5rem; padding: 0.75rem; background: rgba(30, 30, 40, 0.5); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1.25rem; z-index: 50; }
+.dock-item { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1); position: relative; }
+.dock-item svg { width: 20px; height: 20px; color: #e5e7eb; }
+.dock-tooltip { position: absolute; bottom: 120%; left: 50%; transform: translateX(-50%); background-color: #161b22; color: white; padding: 0.25rem 0.75rem; border-radius: 0.5rem; font-size: 0.875rem; white-space: nowrap; opacity: 0; visibility: hidden; transition: opacity 0.2s, visibility 0.2s; }
+.dock-item:hover .dock-tooltip { opacity: 1; visibility: visible; }
+.glassmorphism-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; display: flex; align-items: center; gap: 1rem; padding: 1.5rem; }
+.glassmorphism-card:hover { transform: translateY(-5px); box-shadow: 0 0 20px rgba(200, 200, 255, 0.08); border-color: rgba(200, 200, 255, 0.25); }
+.glassmorphism-card:hover .card-title { color: #c8b6ff; }
+.card-icon-container { flex-shrink: 0; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
+.card-icon-container svg { width: 24px; height: 24px; color: #a371f7; }
+.card-content { flex-grow: 1; }
+.card-title { font-size: 1.125rem; font-weight: 600; line-height: 1.4; color: #fff; transition: color 0.3s ease; }
+.card-date { font-size: 0.875rem; color: #9ca3af; margin-top: 0.25rem; }
+.search-container { background-color: #161b22; border: 1px solid rgba(255, 255, 255, 0.1); }
+.search-container:focus-within { box-shadow: 0 0 0 2px #0d1117, 0 0 0 4px #8888ff; }
+.search-input { background: transparent; border: none; outline: none; color: white; }
+.search-button { background: #2c2c54; transition: background-color 0.3s ease; }
+.search-button:hover { background: #40407a; }
+.feature-card { position: relative; display: flex; flex-direction: column; border-color: rgba(255, 255, 255, 0.1); padding: 2.5rem 0; }
+.feature-card .feature-icon { position: relative; z-index: 10; margin-bottom: 1rem; padding: 0 2.5rem; color: #9ca3af; }
+.feature-card .feature-icon svg { width: 2rem; height: 2rem; }
+.feature-card .feature-title-container { position: relative; z-index: 10; margin-bottom: 0.5rem; padding: 0 2.5rem; font-size: 1.125rem; font-weight: 700; }
+.feature-card .feature-title-bar { position: absolute; left: 0; top: 50%; transform: translateY(-50%); height: 1.5rem; width: 4px; border-top-right-radius: 9999px; border-bottom-right-radius: 9999px; background-color: #4a5568; transition: all 0.2s; }
+.feature-card:hover .feature-title-bar { height: 2rem; background-color: #a371f7; }
+.feature-card .feature-title { display: inline-block; color: #f3f4f6; transition: transform 0.2s; }
+.feature-card:hover .feature-title { transform: translateX(0.5rem); }
+.feature-card .feature-description { position: relative; z-index: 10; padding: 0 2.5rem; max-width: 20rem; font-size: 0.875rem; color: #d1d5db; }
+.feature-card .feature-gradient { position: absolute; inset: 0; height: 100%; width: 100%; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+.feature-card:hover .feature-gradient { opacity: 1; }
+
+/* Add these new styles to your style.css file */
+
+.glassmorphism-card {
+    /* This is a change: makes the card a vertical layout */
+    display: flex;
+    flex-direction: column; 
+    overflow: hidden; /* Important for rounded corners on the image */
+    padding: 0; /* Remove padding from the main card */
+}
+
+.card-image-container {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* This creates the fixed ratio thumbnail */
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes any image fit perfectly without stretching */
+}
+
+.card-content {
+    flex-grow: 1;
+    padding: 1.5rem; /* We move the padding here */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    flex-grow: 1; /* Pushes the date to the bottom */
+}
+.card-date {
+    margin-top: 1rem; /* Adds space above the date */
+}
+
+/* Add this new style for the post description */
+.card-description {
+    font-size: 0.875rem; /* 14px */
+    color: #9ca3af; /* A light gray color */
+    line-height: 1.5;
+    margin-top: 0.75rem; /* Space between title and description */
+    flex-grow: 1; /* This helps push the date to the bottom */
+}

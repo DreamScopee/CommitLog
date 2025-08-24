@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agents - TechHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="category" data-category="agents">
+    <div class="background-gradient-animation">
+        <svg class="hidden"><defs><filter id="blurMe"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" /><feBlend in="SourceGraphic" in2="goo" /></filter></defs></svg>
+        <div class="gradients-container">
+            <div class="gradient-orb orb-1"></div><div class="gradient-orb orb-2"></div><div class="gradient-orb orb-3"></div><div class="gradient-orb orb-4"></div><div class="gradient-orb orb-5"></div><div id="interactive-orb" class="interactive-orb"></div>
+        </div>
+    </div>
+    <main class="container mx-auto px-6 pt-12 md:pt-20 pb-32 relative z-10">
+        <section class="text-center pt-12 md:pt-20">
+             <h1 id="category-title" class="font-jakarta text-4xl sm:text-5xl md:text-7xl font-extrabold mb-12 tracking-tighter text-white/90"></h1>
+             <div class="max-w-xl mx-auto mb-12">
+                <div class="search-container flex items-center rounded-full p-2">
+                    <i data-feather="search" class="w-5 h-5 mx-3 text-gray-400"></i>
+                    <input type="text" id="search-bar" placeholder="Search in this category..." class="search-input w-full h-full text-base sm:text-lg">
+                    <button class="search-button text-white font-semibold py-2 px-4 sm:px-6 rounded-full text-sm sm:text-base">Search</button>
+                </div>
+            </div>
+        </section>
+        <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </main>
+    <footer class="mt-20 py-10 border-t border-gray-800 relative z-10">
+        <div class="container mx-auto px-6 text-center text-gray-400"><p>&copy; 2025 TechHub. All rights reserved.</p></div>
+    </footer>
+    <div id="floating-dock" class="floating-dock"></div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="main.js"></script>
+</body>
+</html>
