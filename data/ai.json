@@ -9,9 +9,11 @@
   },
   {
     "id": 2,
-    "title": "Google DeepMind Achieves Breakthrough in Protein Folding",
-    "link": "#",
-    "date": "2025-06-05"
+    "title": "Quantum-Powered Robotics: A Leap in Control",
+    "description": "Researchers from Shibaura Institute of Technology, Waseda University, and Fujitsu unveiled a pioneering method to optimize robot posture using quantum computing. This breakthrough marks a promising stride toward more agile, efficient, and adaptive robotic systems",
+    "link": "https://global.fujitsu/en-global/newsroom/gl/2025/08/25-01",
+    "date": "2025-08-25",
+    "image": "https://global.fujitsu/-/media/Project/Fujitsu/Fujitsu-HQ/pr/news/common/ogp/news-ogp-robot01.png?rev=8aeac62c30c64fc4ab8a092687aa4b77"
   },
   {
     "id": 3,
