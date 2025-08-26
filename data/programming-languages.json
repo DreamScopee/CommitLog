@@ -1,20 +1,18 @@
 [
     {
         "id": 1,
-        "title": "Rust 2.0: What's New for Systems Programming",
-        "link": "#",
-        "date": "2025-08-05"
-    },
-    {
-        "id": 2,
-        "title": "Mojo Lang: Is it the Python Successor We've Been Waiting For?",
-        "link": "#",
-        "date": "2025-07-20"
-    },
-    {
-        "id": 3,
-        "title": "TypeScript 6.0 Introduces Major Type System Enhancements",
-        "link": "#",
-        "date": "2025-06-10"
-    }
+        "title": "Python's Popularity Continues to Soar in the TIOBE Index",
+        "description": "Python maintains its dominant position at the top of the TIOBE Programming Community Index for August 2025. Its widespread use in AI and data science, coupled with strong support from AI code assistants, has created a self-reinforcing cycle of adoption.",
+        "link": "https://www.techrepublic.com/article/tiobe-index-language-rankings/",
+        "date": "2025-08-26",
+        "image" : "https://contentstatic.techgig.com/photo/70145035.cms"
+  },
+  {
+    "id": 2,
+    "title": "Kotlin on the Backend: Key Announcements from KotlinConf 2025",
+    "description": "Major announcements included enhanced collaboration with the Spring framework, significant ecosystem upgrades, performance improvements, and the introduction of new AI-powered tooling, further solidifying Kotlin's position as a strong contender in the backend space.",
+    "link": "https://blog.jetbrains.com/kotlin/2025/08/kotlin-on-the-backend-what-s-new-from-kotlinconf-2025/#",
+    "date": "2025-08-26",
+    "image" : "https://i.ytimg.com/vi/NcAW-FZtpzk/maxresdefault.jpg"
+  }
 ]
