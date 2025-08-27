@@ -64,81 +64,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (pageType === 'home') {
-        const bentoGrid = document.getElementById('bento-grid');
-
-        async function fetchAllPosts() {
-            try {
-                const promises = categories.map(category => fetch(`data/${category}.json`).then(res => res.json()));
-                const allPostsData = await Promise.all(promises);
-                let allPosts = allPostsData.flat();
-                allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
-                
-                // Assign sizes to posts
-                allPosts = allPosts.map((post, index) => {
-                    if (index === 0) {
-                        post.size = 'large';
-                    } else if (index < 5) {
-                        post.size = 'medium';
-                    } else {
-                        post.size = 'small';
-                    }
-                    return post;
-                });
-
-                renderBentoGrid(allPosts);
-            } catch (error) {
-                console.error("Failed to fetch posts:", error);
-                bentoGrid.innerHTML = `<p class="text-center text-red-400">Error loading content.</p>`;
-            }
-        }
-
-        function renderBentoGrid(posts) {
-            bentoGrid.innerHTML = '';
-            posts.forEach((post, index) => {
-                const item = createBentoItem(post);
-                item.style.opacity = 0;
-                item.style.transform = 'translateY(20px)';
-                item.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
-                bentoGrid.appendChild(item);
-                setTimeout(() => {
-                    item.style.opacity = 1;
-                    item.style.transform = 'translateY(0)';
-                }, 100);
-            });
-        }
-
-        function createBentoItem(post) {
-            const item = document.createElement('a');
-            item.href = post.link;
-            item.target = '_blank';
-            item.rel = 'noopener noreferrer';
-            item.className = `bento-item bento-item-${post.size}`;
-
-            const formattedDate = new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-
-            const imageHtml = `
-                <div class="card-image-container">
-                    ${post.image ? `<img src="${post.image}" alt="${post.title}" class="card-image" onerror="this.parentElement.style.display='none'">` : ''}
-                </div>
-            `;
-
-            const descriptionHtml = post.description
-                ? `<p class="card-description">${post.description}</p>`
-                : '<div class="flex-grow"></div>';
-
-            item.innerHTML = `
-                ${imageHtml}
-                <div class="card-content">
-                    <h3 class="card-title">${post.title}</h3>
-                    ${descriptionHtml}
-                    <p class="card-date">${formattedDate}</p>
-                </div>
-            `;
-
-            return item;
-        }
-
-        fetchAllPosts();
+        const featuresGrid = document.getElementById('features-grid');
+        const features = [
+            { title: "Always Open Source", description: "This entire platform is public. Contribute, fork, or just browse the code.", icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>` },
+            { title: "Community Driven", description: "All news and resources are curated and submitted by a community of tech enthusiasts.", icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>` },
+            { title: "Blazing Fast", description: "No heavy frameworks or backend. Just pure HTML, CSS, and JS for a speedy experience.", icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>` },
+            { title: "Easy to Contribute", description: "Updating content is as simple as editing a JSON file. No complex setup required.", icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>` },
+        ];
+        features.forEach((feature, index) => {
+            const featureCard = document.createElement('div');
+            featureCard.className = 'feature-card border-r border-b border-gray-800';
+            const gradientDirection = index < 4 ? 'bg-gradient-to-t' : 'bg-gradient-to-b';
+            featureCard.innerHTML = `<div class="feature-gradient ${gradientDirection} from-gray-800 to-transparent"></div><div class="feature-icon">${feature.icon}</div><div class="feature-title-container"><div class="feature-title-bar"></div><span class="feature-title">${feature.title}</span></div><p class="feature-description">${feature.description}</p>`;
+            featuresGrid.appendChild(featureCard);
+        });
     }
 
     if (pageType === 'category') {
@@ -186,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        // --- THIS IS THE UPDATED FUNCTION ---
         function createPostCard(post) {
             const card = document.createElement('a');
             card.href = post.link;
@@ -195,15 +135,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const formattedDate = new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
+            // Create the image container regardless of whether there is an image
             const imageHtml = `
                 <div class="card-image-container">
                     ${post.image ? `<img src="${post.image}" alt="${post.title}" class="card-image" onerror="this.parentElement.style.display='none'">` : ''}
                 </div>
             `;
 
+            // Check for a description
             const descriptionHtml = post.description
                 ? `<p class="card-description">${post.description}</p>`
-                : '<div class="flex-grow"></div>';
+                : '<div class="flex-grow"></div>'; // Adds an empty spacer if no description
 
             card.innerHTML = `
                 ${imageHtml}
