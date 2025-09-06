@@ -1,8 +1,8 @@
-# CommitLog 🚀
+# DevsCentral 🚀
 
 ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-CommitLog is a modern, clean, and simple website that provides curated tech news on AI, Startups, and Development. It's designed to be straight to the point, with no fluff.
+DevsCentral is a modern, clean, and simple website that provides curated tech news on AI, Startups, and Development. It's designed to be straight to the point, with no fluff.
 
 ## ✨ Features
 
