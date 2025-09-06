@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const item = document.createElement('a');
             item.href = link.href;
             item.className = 'dock-item';
-            item.innerHTML = `${link.icon}<span class="dock-tooltip">${link.title}</span>`;
+            item.innerHTML = `${link.icon}<span class="dock-title">${link.title}</span>`;
             floatingDockContainer.appendChild(item);
         });
         const dockItems = floatingDockContainer.querySelectorAll('.dock-item');
