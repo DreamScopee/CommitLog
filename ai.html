@@ -22,11 +22,11 @@
     <meta property="twitter:image" content="https://devscentral.tech/favicon.png">
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="CardNav.css">
+    <link rel="icon" type="image/png" href="devscentral.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="devscentral.jpg">
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
@@ -39,81 +39,41 @@
             <div class="gradient-orb orb-1"></div><div class="gradient-orb orb-2"></div><div class="gradient-orb orb-3"></div><div class="gradient-orb orb-4"></div><div class="gradient-orb orb-5"></div><div id="interactive-orb" class="interactive-orb"></div>
         </div>
     </div>
-    <div class="card-nav-container">
-    <nav class="card-nav" style="background-color: #fff;">
-        <div class="card-nav-top">
-            <div class="hamburger-menu" role="button" aria-label="Open menu" tabindex="0" style="color: #000;">
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-            </div>
-
-            <div class="logo-container">
-                <img src="devscentral.jpg" alt="DevsCentral Logo" class="logo">
-            </div>
-
-            <button type="button" class="card-nav-cta-button" style="background-color: #111; color: #fff;">
-                Get Started
-            </button>
+    <header class="container mx-auto px-6 pt-8 md:pt-12 relative z-10 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+            <img src="devscentral.jpg" alt="DevsCentral Logo" class="w-8 h-8 rounded-lg logo-border">
+            <div class="text-2xl font-jakarta font-bold text-white">DevsCentral</div>
         </div>
-
-        <div class="card-nav-content" aria-hidden="true">
-            <div class="nav-card" style="background-color: #0D0716; color: #fff;">
-                <div class="nav-card-label">About</div>
-                <div class="nav-card-links">
-                    <a class="nav-card-link" href="about.html" aria-label="About Company">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right nav-card-link-icon" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg>
-                        Company
-                    </a>
-                    <a class="nav-card-link" href="#" aria-label="About Careers">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right nav-card-link-icon" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg>
-                        Careers
-                    </a>
-                </div>
-            </div>
-            <div class="nav-card" style="background-color: #170D27; color: #fff;">
-                <div class="nav-card-label">Projects</div>
-                <div class="nav-card-links">
-                    <a class="nav-card-link" href="#" aria-label="Featured Projects">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right nav-card-link-icon" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg>
-                        Featured
-                    </a>
-                    <a class="nav-card-link" href="#" aria-label="Project Case Studies">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right nav-card-link-icon" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg>
-                        Case Studies
-                    </a>
-                </div>
-            </div>
-            <div class="nav-card" style="background-color: #271E37; color: #fff;">
-                <div class="nav-card-label">Contact</div>
-                <div class="nav-card-links">
-                    <a class="nav-card-link" href="#" aria-label="Email us">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right nav-card-link-icon" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg>
-                        Email
-                    </a>
-                    <a class="nav-card-link" href="#" aria-label="Twitter">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right nav-card-link-icon" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg>
-                        Twitter
-                    </a>
-                    <a class="nav-card-link" href="#" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right nav-card-link-icon" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg>
-                        LinkedIn
-                    </a>
-                </div>
-            </div>
+        <div class="flex items-center space-x-4">
+            <a href="https://www.buymeacoffee.com/ameenxv" target="_blank" rel="noopener noreferrer" class="text-white header-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-coffee"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h14v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                <span class="header-icon-label">Coffee</span>
+            </a>
+            <a href="https://github.com/ameen-ansarii/CommitLog" target="_blank" rel="noopener noreferrer" class="text-white header-icon">
+                <i data-feather="github" class="w-6 h-6"></i>
+                <span class="header-icon-label">GitHub</span>
+            </a>
         </div>
-    </nav>
-</div>
+    </header>
+    <main class="container mx-auto px-6 pb-32 relative z-10">
+        <section class="text-center pt-12 md:pt-20">
+             <h1 id="category-title" class="font-jakarta text-4xl sm:text-5xl md:text-7xl font-extrabold mb-12 tracking-tighter text-white/90"></h1>
+             <div class="max-w-xl mx-auto mb-12">
+                <div class="search-container flex items-center rounded-full p-2">
+                    <i data-feather="search" class="w-5 h-5 mx-3 text-gray-400"></i>
+                    <input type="text" id="search-bar" placeholder="Search in this category..." class="search-input w-full h-full text-base sm:text-lg">
+                    <button class="search-button text-white font-semibold py-2 px-4 sm:px-6 rounded-full text-sm sm:text-base">Search</button>
+                </div>
+            </div>
+        </section>
+        <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </main>
+    <footer class="mt-20 py-10 border-t border-gray-800 relative z-10">
+        <div class="container mx-auto px-6 text-center text-gray-400"><p>&copy; 2025 TechHub. All rights reserved.</p></div>
+    </footer>
+    <div id="floating-dock" class="floating-dock"></div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="main.js"></script>
+</body>
+</html>
