@@ -28,6 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
         'programming-languages': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>`
     };
 
+    function createSvgIcon(svgString) {
+        const div = document.createElement('div');
+        div.innerHTML = svgString;
+        return div.firstChild;
+    }
+
     function renderFloatingDock() {
         const dockLinks = [
             { title: 'Home', href: 'index.html', icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>` },
@@ -41,7 +47,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const item = document.createElement('a');
             item.href = link.href;
             item.className = 'dock-item';
-            item.innerHTML = `${link.icon}<span class="dock-title">${link.title}</span>`;
+
+            const icon = createSvgIcon(link.icon);
+            const title = document.createElement('span');
+            title.className = 'dock-title';
+            title.textContent = link.title;
+
+            item.appendChild(icon);
+            item.appendChild(title);
+            
             floatingDockContainer.appendChild(item);
         });
         const dockItems = floatingDockContainer.querySelectorAll('.dock-item');
@@ -53,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const itemCenterX = itemRect.left + itemRect.width / 2 - dockRect.left;
                 const distance = Math.abs(mouseX - itemCenterX);
                 const maxDistance = 150;
-                const scale = Math.max(1, 1.4 - distance / maxDistance);
+                const scale = Math.max(1, 1.2 - distance / maxDistance);
                 item.style.transform = `scale(${scale})`;
                 item.style.transition = 'transform 0.1s';
             });
