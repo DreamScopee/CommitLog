@@ -144,12 +144,13 @@ body { background-color: #0d1117; position: relative; overflow-x: hidden; min-he
 
 .header-icon {
     display: flex;
+    flex-direction: column; /* Arrange icon and text vertically */
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.25rem; /* Reduce gap */
 }
 
 .header-icon-label {
-    font-size: 0.875rem;
+    font-size: 0.75rem; /* Make font smaller */
     color: #e5e7eb;
     white-space: nowrap;
 }
