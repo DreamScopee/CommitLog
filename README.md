@@ -19,7 +19,10 @@ DevsCentral is a modern, clean, and simple website that provides curated tech ne
 
 ## 📸 Screenshots
 
-*(Add some cool screenshots of your project here)*
+<img width="1890" height="874" alt="image" src="https://github.com/user-attachments/assets/f22d9985-e347-4604-b2ba-a5d888dfbf39" />
+
+
+
 
 ## 🚀 Getting Started
 
