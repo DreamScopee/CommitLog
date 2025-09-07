@@ -33,12 +33,9 @@
     <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body data-page="about">
-    <div class="background-gradient-animation">
-        <svg class="hidden"><defs><filter id="blurMe"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" /><feBlend in="SourceGraphic" in2="goo" /></filter></defs></svg>
-        <div class="gradients-container">
-            <div class="gradient-orb orb-1"></div><div class="gradient-orb orb-2"></div><div class="gradient-orb orb-3"></div><div class="gradient-orb orb-4"></div><div class="gradient-orb orb-5"></div><div id="interactive-orb" class="interactive-orb"></div>
-        </div>
-    </div>
+    <div id="particles-background" class="particles-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/ogl@0.0.35/dist/ogl.min.js"></script>
+    <script src="particles.js"></script>
     <header class="container mx-auto px-6 pt-8 md:pt-12 relative z-10 flex items-center justify-between">
         <div class="flex items-center space-x-2">
             <img src="devscentral.jpg" alt="DevsCentral Logo" class="w-8 h-8 rounded-lg logo-border">

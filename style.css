@@ -6,17 +6,15 @@ html { scroll-behavior: smooth; }
 body { background-color: #000000; position: relative; overflow-x: hidden; min-height: 100vh; font-family: 'Inter', sans-serif; }
 .logo-border { border: 1px solid white; }
 :root { --gradient-background-start: rgb(15, 23, 42); --gradient-background-end: rgb(15, 23, 42); --first-color: 18, 113, 255; --second-color: 221, 74, 255; --third-color: 100, 220, 255; --fourth-color: 200, 50, 50; --fifth-color: 180, 180, 50; --pointer-color: 140, 100, 255; --size: 40%; --blending-value: hard-light; }
-.background-gradient-animation { position: fixed; top: 0; left: 0; height: 100vh; width: 100vw; overflow: hidden; z-index: -1; background: linear-gradient(40deg, var(--gradient-background-start), var(--gradient-background-end)); }
-.gradients-container { height: 100%; width: 100%; filter: url(#blurMe) blur(40px); }
-.gradient-orb { position: absolute; opacity: 1; mix-blend-mode: var(--blending-value); width: var(--size); height: var(--size); top: calc(50% - var(--size) / 2); left: calc(50% - var(--size) / 2); }
-.orb-1 { background: radial-gradient(circle at center, rgba(var(--first-color), 0.8) 0, rgba(var(--first-color), 0) 50%) no-repeat; transform-origin: center center; animation: moveInCircle 20s reverse infinite; }
-.orb-2 { background: radial-gradient(circle at center, rgba(var(--second-color), 0.8) 0, rgba(var(--second-color), 0) 50%) no-repeat; transform-origin: calc(50% - 400px); animation: moveInCircle 20s linear infinite; }
-.orb-3 { background: radial-gradient(circle at center, rgba(var(--third-color), 0.8) 0, rgba(var(--third-color), 0) 50%) no-repeat; transform-origin: calc(50% + 400px); animation: moveInCircle 25s linear infinite; }
-.orb-4 { background: radial-gradient(circle at center, rgba(var(--fourth-color), 0.8) 0, rgba(var(--fourth-color), 0) 50%) no-repeat; transform-origin: calc(50% - 200px); animation: moveHorizontal 25s reverse infinite; }
-.orb-5 { background: radial-gradient(circle at center, rgba(var(--fifth-color), 0.8) 0, rgba(var(--fifth-color), 0) 50%) no-repeat; transform-origin: calc(50% - 800px) calc(50% + 800px); animation: moveInCircle 22s linear infinite; }
-.interactive-orb { position: absolute; background: radial-gradient(circle at center, rgba(var(--pointer-color), 0.8) 0, rgba(var(--pointer-color), 0) 50%) no-repeat; mix-blend-mode: var(--blending-value); width: 100%; height: 100%; top: -50%; left: -50%; opacity: 0.7; }
-@keyframes moveInCircle { 0% { transform: rotate(0deg); } 50% { transform: rotate(180deg); } 100% { transform: rotate(360deg); } }
-@keyframes moveHorizontal { 0% { transform: translateX(-50%) translateY(-10%); } 50% { transform: translateX(50%) translateY(10%); } 100% { transform: translateX(-50%) translateY(-10%); } }
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Ensure it's behind other content */
+  overflow: hidden; /* Hide any overflow from particles */
+}
 .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
 .glassmorphism-card, .glassmorphism-input { background: rgba(30, 30, 40, 0.5); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 0.75rem; }
 .floating-dock { position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; align-items: flex-end; gap: 0.5rem; padding: 0.75rem; background: rgba(30, 30, 40, 0.5); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1.25rem; z-index: 50; }
