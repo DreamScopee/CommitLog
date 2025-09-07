@@ -1,4 +1,4 @@
-import { Renderer, Camera, Geometry, Program, Mesh } from 'https://cdn.jsdelivr.net/npm/ogl@0.0.35/dist/ogl.min.js';
+import { Renderer, Camera, Geometry, Program, Mesh } from 'https://cdn.jsdelivr.net/npm/ogl';
 
 const defaultColors = ['#ffffff', '#ffffff', '#ffffff'];
 
