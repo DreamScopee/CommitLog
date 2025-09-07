@@ -1,4 +1,3 @@
-
 const defaultColors = ['#ffffff', '#ffffff', '#ffffff'];
 
 const hexToRgb = hex => {
@@ -104,12 +103,12 @@ function initParticles(containerId, options = {}) {
 
   const mouse = { x: 0, y: 0 };
 
-  const renderer = new OGL.Renderer({ depth: false, alpha: true });
+  const renderer = new Renderer({ depth: false, alpha: true });
   const gl = renderer.gl;
   container.appendChild(gl.canvas);
   gl.clearColor(0, 0, 0, 0);
 
-  const camera = new OGL.Camera(gl, { fov: 15 });
+  const camera = new Camera(gl, { fov: 15 });
   camera.position.set(0, 0, cameraDistance);
 
   const resize = () => {
@@ -154,13 +153,13 @@ function initParticles(containerId, options = {}) {
     colors.set(col, i * 3);
   }
 
-  const geometry = new OGL.Geometry(gl, {
+  const geometry = new Geometry(gl, {
     position: { size: 3, data: positions },
     random: { size: 4, data: randoms },
     color: { size: 3, data: colors }
   });
 
-  const program = new OGL.Program(gl, {
+  const program = new Program(gl, {
     vertex,
     fragment,
     uniforms: {
@@ -174,7 +173,7 @@ function initParticles(containerId, options = {}) {
     depthTest: false
   });
 
-  const particles = new OGL.Mesh(gl, { mode: gl.POINTS, geometry, program });
+  const particles = new Mesh(gl, { mode: gl.POINTS, geometry, program });
 
   let animationFrameId;
   let lastTime = performance.now();
