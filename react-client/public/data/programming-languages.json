@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Python's Popularity Continues to Soar in the TIOBE Index",
+        "description": "Python maintains its dominant position at the top of the TIOBE Programming Community Index for August 2025. Its widespread use in AI and data science, coupled with strong support from AI code assistants, has created a self-reinforcing cycle of adoption.",
+        "link": "https://www.techrepublic.com/article/tiobe-index-language-rankings/",
+        "date": "2025-08-26",
+        "image" : "https://contentstatic.techgig.com/photo/70145035.cms"
+  },
+  {
+    "id": 2,
+    "title": "Kotlin on the Backend: Key Announcements from KotlinConf 2025",
+    "description": "Major announcements included enhanced collaboration with the Spring framework, significant ecosystem upgrades, performance improvements, and the introduction of new AI-powered tooling, further solidifying Kotlin's position as a strong contender in the backend space.",
+    "link": "https://blog.jetbrains.com/kotlin/2025/08/kotlin-on-the-backend-what-s-new-from-kotlinconf-2025/#",
+    "date": "2025-08-26",
+    "image" : "https://i.ytimg.com/vi/NcAW-FZtpzk/maxresdefault.jpg"
+  },
+  {
+    "id": 3,
+    "title": "MoonBit Enters Beta: AI-Friendly Wasm-Optimized Language",
+    "description": "MoonBit, now in beta as of mid-2025, offers a garbage-collected, WebAssembly-native language with AI-assisted development tools. Drawing inspiration from Rust, Go, and Swift, it's designed for cloud and edge efficiency and LLM-friendly workflows.",
+    "link": "https://medium.com/@connect.hashblock/moonbit-beta-webassemblys-new-language-for-cloud-edge-45db0c70ce6f",
+    "date": "2025-08-26",
+    "image" : "https://www.moonbitlang.com/assets/images/cover-956e5d0cdb78fb505651ff4eb84ce5ab.png"
+  }
+]

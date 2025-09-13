@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "title": "Autonomous Agents are Now Filing Patents",
+        "description": "The new model showcases significant improvements in contextual understanding and multi-modal capabilities.",
+        "link": "#",
+        "date": "2025-08-01",
+        "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832"
+    },
+    {
+        "id": 2,
+        "title": "cursor ai ",
+        "description": "The new model showcases significant improvements in contextual understand",
+        "link": "https://cursor.com/agents",
+        "date": "2025-07-15",
+        "image": "https://cursor.com/en/twitter-image.png?375711d39ab904b7"
+    },
+    {
+        "id": 3,
+        "title": "Meta Freezes AI Hiring Amid Restructuring",
+        "description": "Meta has halted AI division hiring amidst a restructuring of its Superintelligence Lab following a massive recruitment drive that included offering exorbitant compensation packages to lure talent from competitors.", 
+        "link": "https://timesofindia.indiatimes.com/technology/tech-news/mark-zuckerbergs-meta-freezes-ai-hiring-and-bans-employees-from/articleshow/123430149.cms?utm_source=chatgpt.com",
+        "date": "2025-08-24",
+        "image": "https://static.toiimg.com/thumb/msid-123430101,width-1280,height-720,resizemode-4/123430101.jpg"
+ 
+    },
+    {
+        "id": 4,
+        "title": "GitHub Enhances Copilot Integration with New Agents Panel",
+        "description": "GitHub introduces an Agents Panel, allowing developers to launch Copilot coding tasks from any page on the platform, streamlining the development workflow.",
+        "link": "https://github.blog/changelog/2025-08-19-agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github-com/",
+        "date": "2025-08-19",
+        "image": "https://github.blog/wp-content/uploads/2025/05/PadawayBlog_Assignee_006.jpg?fit=2400%2C1260"
+    },
+    {
+    "id": 5,
+    "title": "Climaty AI launches as a CliMarTech startup",
+    "description": "offering Agentic AI agents that streamline media workflows with carbon intelligence. Founded by Neel Pandya, it aims to power sustainable ad campaigns across major regions",
+    "link": "https://laotiantimes.com/2025/08/26/climaty-ai-launched-by-neel-pandya-to-power-the-new-age-of-marketing/?utm_source=chatgpt.com",
+    "date": "2025-08-26",
+    "image" : "https://www.medianews4u.com/wp-content/uploads/2025/04/Ravi-Rao-Climaty-AI.png"
+  }
+
+  
+]

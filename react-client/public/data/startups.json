@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "title": "Central Eurasia's largest-ever startup competition",
+    "description": "The startup ecosystem in Central Eurasia is having its moment. What started as 485 applications from across 27 countries, has culminated in the largest startup pitch competition in Central Eurasia's history.",
+    "link": "https://techcrunch.com/2025/08/25/road-to-battlefield-central-eurasias-largest-startup-competition-in-history-sends-four-winners-to-techcrunch-startup-battlefield/?utm_source=chatgpt.com",
+    "date": "2025-08-26",
+    "image" : "https://caspianpost.com/storage/photos/thumbs/large/k5SZD8yX17CkDV6qSrOfg0usMDbaVfndEx7qKzbz.webp"
+  },
+
+  {
+    "id": 2,
+    "title": "U.S. Startup Exits Gain Momentum",
+    "description": "Venture capital–backed startup exits are on the upswing in 2025, with both IPOs and acquisitions accelerating after a quiet phase, signaling renewed confidence in the ecosystem",
+    "link": "https://news.crunchbase.com/venture/startup-billion-dollar-exits-growing-ma-ipo-august-2025/?utm_source=chatgpt.com",
+    "date": "2025-08-26",
+    "image" : "https://news.crunchbase.com/wp-content/uploads/Exits_2023.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Delhi's Ambitious Startup Policy",
+    "description": "The Delhi government proposed a draft startup policy targeting the creation of 5,000 startups by 2035, supported by a ₹200 crore VC fund, incentives for co-working, patents, exhibitions, with special benefits for women and marginalized communities. It also includes a digital portal, helpdesk, and policy monitoring frameworks.",
+    "link": "https://www.livemint.com/news/india/5000-ventures-by-2035-and-200-cr-vc-fund-what-rekha-gupta-led-delhi-govt-s-ambitious-draft-startup-policy-offers/amp-11756171419668.html?utm_source=chatgpt.com",
+    "date": "2025-08-26",
+    "image" : "https://www.livemint.com/lm-img/img/2025/08/26/optimize/startup_1756171910386_1756171915436_1756171918997.png"
+  }
+
+]

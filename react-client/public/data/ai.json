@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "title": "OpenAI Launches GPT-5, Setting a New Benchmark in Multi-modal Understanding",
+    "description": "The new model introduces a 'thinking mode' for more complex problem-solving and integrates text, image, and voice processing. Benchmarks show a 40% improvement over GPT-4 in handling complex reasoning tasks",
+    "link": "https://simple.ai/p/openai-launches-gpt-5",
+    "date": "2025-08-13",
+    "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/acab73d1-38f0-4f1e-9080-0715f22a567c/GPT-5-NewEra-10.png?t=1755089112"
+  },
+  {
+    "id": 2,
+    "title": "Quantum-Powered Robotics: A Leap in Control",
+    "description": "Researchers from Shibaura Institute of Technology, Waseda University, and Fujitsu unveiled a pioneering method to optimize robot posture using quantum computing. This breakthrough marks a promising stride toward more agile, efficient, and adaptive robotic systems",
+    "link": "https://global.fujitsu/en-global/newsroom/gl/2025/08/25-01",
+    "date": "2025-08-25",
+    "image": "https://global.fujitsu/-/media/Project/Fujitsu/Fujitsu-HQ/pr/news/common/ogp/news-ogp-robot01.png?rev=8aeac62c30c64fc4ab8a092687aa4b77"
+  },
+  {
+    "id": 3,
+    "title": "AWS CEO on the Value of Junior Developers in the AI Era",
+    "description": "AWS CEO Matt Garman sharply criticized the trend of eliminating junior software developers in favor of AI, calling it "one of the dumbest things" he's heard. He highlighted the importance of these junior talents for long-term strategic growth",
+    "link": "https://www.itpro.com/software/development/aws-ceo-matt-garman-just-said-what-everyone-is-thinking-about-ai-replacing-software-developers?utm_source=chatgpt.com",
+    "date": "2025-08-25",
+    "image": "https://cdn.mos.cms.futurecdn.net/pG8pi5WjFxWmBPppTXuDi5-1280-80.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Elon Musk's xAI Aims Ultra-Large Scale & Open-Source Future",
+    "description": "Elon Musk revealed that xAI plans to scale up to the compute power equivalent of 50 million H100 AI chips within the next five years. Additionally, the company has begun open-sourcing its models, with Grok 2.5 already released on Hugging Face, marking a bold move toward transparency",
+    "link": "https://www.socialmediatoday.com/news/elon-musk-outlines-plan-to-power-up-xai-h100-capacity/758458/?utm_source=chatgpt.com",
+    "date": "2025-08-25",
+    "image": "https://imgproxy.divecdn.com/cDoidzaUNCKDx1TOAE_5Y19v95nGvfbb5OHP1Lgj5_s/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS94YWlfbG9nby5wbmc=.webp"
+  },
+  {
+    "id": 5,
+    "title": "UK Government Announces £50 Million Fund for AI Safety Research",
+    "description": "The British government has launched a new £50 million fund dedicated to independent research into the risks and safety protocols associated with advanced AI systems. The initiative, announced at the AI Safety Summit in London, will support academic institutions and non-profits working on AI alignment",
+    "link": "https://www.gov.uk/government/news/54-million-boost-to-develop-secure-and-trustworthy-ai-research",
+    "date": "2025-08-26",
+    "image" : "https://english.news.cn/20231103/a28681e3b2ce4acc9b86d92b244460d1/acee445c08ce46809a8bf9ad65e65978.jpg"
+  }
+
+]

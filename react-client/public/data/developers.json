@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Chinese Developer Sentenced for Cyberattacks",
+    "description": "David Lu, a Chinese software developer, was sentenced to four years in prison for deploying malware against his former U.S. employer.",
+    "link": "https://timesofindia.indiatimes.com/technology/tech-news/chinese-software-developer-faces-4-years-jail-time-for-cyberattacks-against-his-former-us-employer/articleshow/123481286.cms",
+    "date": "2025-08-24",
+    "image": "https://static01.nyt.com/images/2025/08/22/multimedia/22xp-computer-fwkh/22xp-computer-fwkh-facebookJumbo.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Google Tightens Developer Verification for Android",
+    "description": "Starting in 2026, Google will require identity verification for developers distributing apps outside the Play Store—extending beyond certification on Android devices. An early-access phase begins in October 2025, full rollout by March 2026, and enforcement starts in regions like Brazil, Indonesia, Singapore, and Thailand later that year.",
+    "link": "https://android-developers.googleblog.com/2025/08/elevating-android-security.html",
+    "date": "2025-08-26",
+    "image" : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVDLlL6_D8zu5LjIbWDraL1LZVUOoE5dJi9skQjPFemQYocDXVnM8wukbd9tVhUWB_Mbp08ExA4cHulE_vToF52p3OGDssWT5ZDClIb0-DDM29qQeYxj1Zgkrq8TCkyMUKKETlmv2DjtiXC_A7kkL1B_L1MN0ziUGexDCGib5fX5uCnPqQz3rCvysG-Y8/s1600/Android_Verification_Banner02.png"
+  },
+  {
+    "id": 3,
+    "title": "VS Code's Latest Update Elevates Development Workflow",
+    "description": "The newest release of Visual Studio Code auto-starts MCP servers, offers support for Git worktrees, and introduces the ability to checkpoint and restore Copilot chat sessions, enhancing collaboration and session continuity.",
+    "link": "https://www.infoworld.com/article/4045600/visual-studio-code-update-auto-starts-mcp-servers.html",
+    "date": "2025-08-26",
+    "image" : "https://miro.medium.com/1*jxyQ9oXNj1bXos_l3g8Jnw.png"
+  }
+]
