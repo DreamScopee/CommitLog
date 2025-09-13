@@ -1,7 +1,11 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, Link } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
+import { useAuth } from '../contexts/AuthContext'
+import UserProfile from '../components/UserProfile'
 
 function Header() {
+  const { user } = useAuth()
+
   return (
     <header className="container mx-auto px-6 pt-8 md:pt-12 relative z-10 flex items-center justify-between">
       <div className="flex items-center space-x-2">
@@ -9,6 +13,24 @@ function Header() {
         <div className="text-2xl font-jakarta font-bold text-white">DevsCentral</div>
       </div>
       <div className="flex items-center space-x-4">
+        {user ? (
+          <UserProfile />
+        ) : (
+          <div className="flex items-center space-x-3">
+            <Link
+              to="/login"
+              className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
+            >
+              Sign In
+            </Link>
+            <Link
+              to="/signup"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
+            >
+              Sign Up
+            </Link>
+          </div>
+        )}
         <a href="https://www.buymeacoffee.com/ameenxv" target="_blank" rel="noopener noreferrer" className="text-white header-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-coffee"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h14v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
           <span className="header-icon-label">Coffee</span>
