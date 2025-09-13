@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react'
-import { supabase } from '../lib/supabase'
+import { supabase, isSupabaseConfigured } from '../lib/supabase'
 
 const AuthContext = createContext({})
 
@@ -17,14 +17,25 @@ export const AuthProvider = ({ children }) => {
   const [userProfile, setUserProfile] = useState(null)
 
   useEffect(() => {
+    // If Supabase is not configured, skip authentication
+    if (!isSupabaseConfigured) {
+      setLoading(false)
+      return
+    }
+
     // Get initial session
     const getInitialSession = async () => {
-      const { data: { session } } = await supabase.auth.getSession()
-      setUser(session?.user ?? null)
-      if (session?.user) {
-        await fetchUserProfile(session.user.id)
+      try {
+        const { data: { session } } = await supabase.auth.getSession()
+        setUser(session?.user ?? null)
+        if (session?.user) {
+          await fetchUserProfile(session.user.id)
+        }
+      } catch (error) {
+        console.error('Error getting initial session:', error)
+      } finally {
+        setLoading(false)
       }
-      setLoading(false)
     }
 
     getInitialSession()
@@ -32,13 +43,18 @@ export const AuthProvider = ({ children }) => {
     // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
-        setUser(session?.user ?? null)
-        if (session?.user) {
-          await fetchUserProfile(session.user.id)
-        } else {
-          setUserProfile(null)
+        try {
+          setUser(session?.user ?? null)
+          if (session?.user) {
+            await fetchUserProfile(session.user.id)
+          } else {
+            setUserProfile(null)
+          }
+        } catch (error) {
+          console.error('Error handling auth state change:', error)
+        } finally {
+          setLoading(false)
         }
-        setLoading(false)
       }
     )
 
@@ -76,14 +92,15 @@ export const AuthProvider = ({ children }) => {
         throw new Error('Username is already taken')
       }
 
-      // Create user account
+      // Create user account with email confirmation disabled for OTP flow
       const { data, error } = await supabase.auth.signUp({
         email,
         password,
         options: {
           data: {
             username: username
-          }
+          },
+          emailRedirectTo: undefined // Disable email redirect for OTP flow
         }
       })
 

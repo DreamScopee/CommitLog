@@ -7,6 +7,7 @@ import Layout from './ui/Layout.jsx'
 import HomePage from './views/HomePage.jsx'
 import AboutPage from './views/AboutPage.jsx'
 import CategoryPage from './views/CategoryPage.jsx'
+import ProfilePage from './views/ProfilePage.jsx'
 import LoginForm from './components/auth/LoginForm.jsx'
 import SignupForm from './components/auth/SignupForm.jsx'
 import ForgotPasswordForm from './components/auth/ForgotPasswordForm.jsx'
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: 'about', element: <AboutPage /> },
+      { path: 'profile', element: <ProfilePage /> },
       { path: 'ai', element: <CategoryPage category="ai" /> },
       { path: 'agents', element: <CategoryPage category="agents" /> },
       { path: 'developers', element: <CategoryPage category="developers" /> },

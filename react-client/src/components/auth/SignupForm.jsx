@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
+import OTPVerification from './OTPVerification'
 
 export default function SignupForm() {
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ export default function SignupForm() {
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
   const [usernameStatus, setUsernameStatus] = useState('')
+  const [showOTP, setShowOTP] = useState(false)
 
   const { signUp, checkUsernameAvailability } = useAuth()
 
@@ -97,13 +99,36 @@ export default function SignupForm() {
       if (error) {
         setError(error.message)
       } else {
-        setMessage('Account created successfully! Please check your email to verify your account.')
+        setMessage('Account created! Check your email for the verification code.')
+        setShowOTP(true)
       }
     } catch (err) {
       setError(err.message)
     } finally {
       setLoading(false)
     }
+  }
+
+  const handleOTPSuccess = () => {
+    // Redirect to login or dashboard
+    window.location.href = '/login'
+  }
+
+  const handleBackToSignup = () => {
+    setShowOTP(false)
+    setMessage('')
+    setError('')
+  }
+
+  // Show OTP verification if signup was successful
+  if (showOTP) {
+    return (
+      <OTPVerification
+        email={formData.email}
+        onSuccess={handleOTPSuccess}
+        onBack={handleBackToSignup}
+      />
+    )
   }
 
   return (
